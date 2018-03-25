@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/calendar"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar"
+        android:title="Calendar"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/events"
+        android:enabled="true"
+        android:icon="@drawable/ic_events"
+        android:title="Events"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/account"
+        android:enabled="true"
+        android:icon="@drawable/ic_account"
+        android:title="Account"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/aboutUs"
+        android:enabled="true"
+        android:icon="@drawable/ic_about_us"
+        android:title="About Us"
+        app:showAsAction="ifRoom"/>
+</menu>

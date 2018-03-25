@@ -9,12 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Calendar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_calendar);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav);
         BottomNavigationHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
@@ -25,21 +25,22 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home:
-                        Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
+                        Intent toHome = new Intent(Calendar.this, MainActivity.class);
+                        startActivity(toHome );
                         break;
                     case R.id.calendar:
                         //Toast.makeText(MainActivity.this, "Calendar", Toast.LENGTH_SHORT).show();
-                        Intent toCalendar = new Intent(MainActivity.this, Calendar.class);
-                        startActivity(toCalendar);
+//                        Intent toCalendar = new Intent(Calendar.this, Calendar.class);
+//                        startActivity(toCalendar);
                         break;
                     case R.id.events:
-                        Toast.makeText(MainActivity.this, "Events", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Calendar.this, "Events", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.account:
-                        Toast.makeText(MainActivity.this, "account", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Calendar.this, "account", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.aboutUs:
-                        Toast.makeText(MainActivity.this, "about us", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Calendar.this, "about us", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;

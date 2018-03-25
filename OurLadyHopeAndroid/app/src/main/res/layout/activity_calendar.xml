@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tan089.ourladyhope.MainActivity">
+    tools:context="com.example.tan089.ourladyhope.Calendar">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello World"
-        android:textSize="50dp"
-        android:textColor="#000"/>
+        android:text="Calendar"
+        android:textSize="30dp" />
+
     <RelativeLayout
+        android:id="@+id/bottomContainer"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/bottomContainer"
         android:layout_alignParentBottom="true"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
@@ -25,11 +28,8 @@
             android:background="@color/colorPrimary"
             app:itemIconTint="@drawable/bottom_item_color_state"
             app:itemTextColor="@drawable/bottom_item_color_state"
-            app:menu="@menu/bottom_navigation_menu"
-            >
+            app:menu="@menu/bottom_navigation_menu">
 
         </android.support.design.widget.BottomNavigationView>
     </RelativeLayout>
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
