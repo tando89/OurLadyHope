@@ -5,11 +5,177 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.tan089.ourladyhope.Calendar">
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Calendar"
+        android:textColor="#000"
         android:textSize="30dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="#000"
+            android:orientation="vertical"
+            android:padding="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Important Dates"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="January"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="February"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="March"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="April"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="May"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="June"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="July"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="August"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="September"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="October"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="November"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="December"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/imgChristmas"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:id="@+id/bottomContainer"
@@ -32,4 +198,5 @@
 
         </android.support.design.widget.BottomNavigationView>
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
