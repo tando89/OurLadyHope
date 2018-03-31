@@ -12,6 +12,9 @@
 		2715EF57206743DF007DE043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2715EF55206743DF007DE043 /* Main.storyboard */; };
 		2715EF59206743DF007DE043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2715EF58206743DF007DE043 /* Assets.xcassets */; };
 		2715EF5C206743DF007DE043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2715EF5A206743DF007DE043 /* LaunchScreen.storyboard */; };
+		273E8AA8206F5210004E8645 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E8AA7206F5210004E8645 /* CalendarVC.swift */; };
+		273E8AAA206F5421004E8645 /* CustomCellCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */; };
+		52C1AF4194FBC5B5E1ECC90B /* Pods_OurLadyHope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		2715EF58206743DF007DE043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2715EF5B206743DF007DE043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2715EF5D206743DF007DE043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273E8AA7206F5210004E8645 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCalendar.swift; sourceTree = "<group>"; };
+		3D6F0602DED2EF4406AE7A7E /* Pods-OurLadyHope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurLadyHope.release.xcconfig"; path = "Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope.release.xcconfig"; sourceTree = "<group>"; };
+		BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurLadyHope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BC4D4D4CBF7F8408F87CCC /* Pods-OurLadyHope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurLadyHope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C1AF4194FBC5B5E1ECC90B /* Pods_OurLadyHope.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03ACC2DBAD4B9CA1D2293E0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2715EF45206743DF007DE043 = {
 			isa = PBXGroup;
 			children = (
 				2715EF50206743DF007DE043 /* OurLadyHope */,
 				2715EF4F206743DF007DE043 /* Products */,
+				85A89380052F1885220F6C6A /* Pods */,
+				03ACC2DBAD4B9CA1D2293E0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +79,19 @@
 				2715EF58206743DF007DE043 /* Assets.xcassets */,
 				2715EF5A206743DF007DE043 /* LaunchScreen.storyboard */,
 				2715EF5D206743DF007DE043 /* Info.plist */,
+				273E8AA7206F5210004E8645 /* CalendarVC.swift */,
+				273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */,
 			);
 			path = OurLadyHope;
+			sourceTree = "<group>";
+		};
+		85A89380052F1885220F6C6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9BC4D4D4CBF7F8408F87CCC /* Pods-OurLadyHope.debug.xcconfig */,
+				3D6F0602DED2EF4406AE7A7E /* Pods-OurLadyHope.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2715EF60206743DF007DE043 /* Build configuration list for PBXNativeTarget "OurLadyHope" */;
 			buildPhases = (
+				F6ACE951A80ADC127B35BC2A /* [CP] Check Pods Manifest.lock */,
 				2715EF4A206743DF007DE043 /* Sources */,
 				2715EF4B206743DF007DE043 /* Frameworks */,
 				2715EF4C206743DF007DE043 /* Resources */,
+				1966E99E9A3A305255271033 /* [CP] Embed Pods Frameworks */,
+				963363843AC3868CEBCE3749 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +164,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1966E99E9A3A305255271033 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		963363843AC3868CEBCE3749 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6ACE951A80ADC127B35BC2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OurLadyHope-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2715EF4A206743DF007DE043 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273E8AAA206F5421004E8645 /* CustomCellCalendar.swift in Sources */,
 				2715EF54206743DF007DE043 /* ViewController.swift in Sources */,
 				2715EF52206743DF007DE043 /* AppDelegate.swift in Sources */,
+				273E8AA8206F5210004E8645 /* CalendarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +361,7 @@
 		};
 		2715EF61206743DF007DE043 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BC4D4D4CBF7F8408F87CCC /* Pods-OurLadyHope.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +377,7 @@
 		};
 		2715EF62206743DF007DE043 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D6F0602DED2EF4406AE7A7E /* Pods-OurLadyHope.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
