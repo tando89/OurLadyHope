@@ -14,6 +14,7 @@
 		2715EF5C206743DF007DE043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2715EF5A206743DF007DE043 /* LaunchScreen.storyboard */; };
 		273E8AA8206F5210004E8645 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E8AA7206F5210004E8645 /* CalendarVC.swift */; };
 		273E8AAA206F5421004E8645 /* CustomCellCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */; };
+		27513B8D2077418E008043B4 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27513B8C2077418E008043B4 /* WeatherDataModel.swift */; };
 		52C1AF4194FBC5B5E1ECC90B /* Pods_OurLadyHope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		2715EF5D206743DF007DE043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273E8AA7206F5210004E8645 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCalendar.swift; sourceTree = "<group>"; };
+		27513B8C2077418E008043B4 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		3D6F0602DED2EF4406AE7A7E /* Pods-OurLadyHope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurLadyHope.release.xcconfig"; path = "Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope.release.xcconfig"; sourceTree = "<group>"; };
 		BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurLadyHope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC4D4D4CBF7F8408F87CCC /* Pods-OurLadyHope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurLadyHope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,16 +75,49 @@
 		2715EF50206743DF007DE043 /* OurLadyHope */ = {
 			isa = PBXGroup;
 			children = (
-				2715EF51206743DF007DE043 /* AppDelegate.swift */,
-				2715EF53206743DF007DE043 /* ViewController.swift */,
-				2715EF55206743DF007DE043 /* Main.storyboard */,
+				27513B8B20768B8E008043B4 /* view */,
+				27513B8A20768B62008043B4 /* customCells */,
+				27513B8920768B58008043B4 /* controllers */,
+				27513B8820768B45008043B4 /* model */,
 				2715EF58206743DF007DE043 /* Assets.xcassets */,
 				2715EF5A206743DF007DE043 /* LaunchScreen.storyboard */,
 				2715EF5D206743DF007DE043 /* Info.plist */,
-				273E8AA7206F5210004E8645 /* CalendarVC.swift */,
-				273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */,
 			);
 			path = OurLadyHope;
+			sourceTree = "<group>";
+		};
+		27513B8820768B45008043B4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				27513B8C2077418E008043B4 /* WeatherDataModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		27513B8920768B58008043B4 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2715EF51206743DF007DE043 /* AppDelegate.swift */,
+				2715EF53206743DF007DE043 /* ViewController.swift */,
+				273E8AA7206F5210004E8645 /* CalendarVC.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		27513B8A20768B62008043B4 /* customCells */ = {
+			isa = PBXGroup;
+			children = (
+				273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */,
+			);
+			path = customCells;
+			sourceTree = "<group>";
+		};
+		27513B8B20768B8E008043B4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2715EF55206743DF007DE043 /* Main.storyboard */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		85A89380052F1885220F6C6A /* Pods */ = {
@@ -124,7 +159,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tan Do ";
 				TargetAttributes = {
 					2715EF4D206743DF007DE043 = {
@@ -172,11 +207,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -224,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				273E8AAA206F5421004E8645 /* CustomCellCalendar.swift in Sources */,
+				27513B8D2077418E008043B4 /* WeatherDataModel.swift in Sources */,
 				2715EF54206743DF007DE043 /* ViewController.swift in Sources */,
 				2715EF52206743DF007DE043 /* AppDelegate.swift in Sources */,
 				273E8AA8206F5210004E8645 /* CalendarVC.swift in Sources */,
@@ -266,6 +306,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -273,6 +314,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -323,6 +365,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -330,6 +373,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -367,11 +411,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPPQ37FGYE;
 				INFOPLIST_FILE = OurLadyHope/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tando.OurLadyHope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,11 +428,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPPQ37FGYE;
 				INFOPLIST_FILE = OurLadyHope/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tando.OurLadyHope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

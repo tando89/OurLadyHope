@@ -7,4 +7,6 @@ target 'OurLadyHope' do
 
   # Pods for OurLadyHope
     pod 'SDWebImage', '~> 4.0'
+    pod 'SwiftyJSON'
+    pod 'Alamofire'
 end
