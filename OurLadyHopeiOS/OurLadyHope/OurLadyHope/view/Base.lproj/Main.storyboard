@@ -26,58 +26,70 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snM-25-3wz">
-                                <rect key="frame" x="0.0" y="155" width="375" height="38"/>
+                                <rect key="frame" x="0.0" y="155" width="375" height="33.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Bernardino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkb-66-B0D">
-                                        <rect key="frame" x="50" y="5" width="118" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4f-t0-6fH">
-                                        <rect key="frame" x="176" y="5" width="44" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cin-Ff-biP">
-                                        <rect key="frame" x="235" y="5" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="1sq-vB-RrR"/>
-                                            <constraint firstAttribute="height" constant="20" id="Ssb-Vl-9TX"/>
-                                        </constraints>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="skS-Tl-yPo">
+                                        <rect key="frame" x="5" y="5" width="365" height="23.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Bernardino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkb-66-B0D">
+                                                <rect key="frame" x="0.0" y="0.0" width="129.5" height="23.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="129.5" id="Kuj-xZ-Juf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 °F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4f-t0-6fH">
+                                                <rect key="frame" x="129.5" y="0.0" width="44.5" height="23.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44.5" id="2FA-4y-FLl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Sky It's a Good Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYj-eb-WZ8">
+                                                <rect key="frame" x="174" y="0.0" width="191" height="23.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="191" id="vMX-xk-NhK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.47053509119999998" green="0.71339620780000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="E4f-t0-6fH" secondAttribute="bottom" constant="12" id="4bL-LK-AVf"/>
-                                    <constraint firstItem="E4f-t0-6fH" firstAttribute="baseline" secondItem="bkb-66-B0D" secondAttribute="baseline" id="ALY-9b-Lv8"/>
-                                    <constraint firstItem="Cin-Ff-biP" firstAttribute="top" secondItem="snM-25-3wz" secondAttribute="top" constant="5" id="M2V-Lf-nxb"/>
-                                    <constraint firstItem="Cin-Ff-biP" firstAttribute="leading" secondItem="E4f-t0-6fH" secondAttribute="trailing" constant="15" id="Q3K-Jm-PIa"/>
-                                    <constraint firstItem="bkb-66-B0D" firstAttribute="leading" secondItem="snM-25-3wz" secondAttribute="leading" constant="50" id="X3D-70-HIc"/>
-                                    <constraint firstItem="E4f-t0-6fH" firstAttribute="leading" secondItem="bkb-66-B0D" secondAttribute="trailing" constant="8" symbolic="YES" id="aUz-fO-Yxd"/>
-                                    <constraint firstItem="bkb-66-B0D" firstAttribute="top" secondItem="snM-25-3wz" secondAttribute="top" constant="5" id="vPI-zI-4db"/>
+                                    <constraint firstItem="skS-Tl-yPo" firstAttribute="leading" secondItem="snM-25-3wz" secondAttribute="leading" constant="5" id="W22-UD-OhL"/>
+                                    <constraint firstItem="skS-Tl-yPo" firstAttribute="top" secondItem="snM-25-3wz" secondAttribute="top" constant="5" id="gcB-Is-2V6"/>
+                                    <constraint firstAttribute="trailing" secondItem="skS-Tl-yPo" secondAttribute="trailing" constant="5" id="jwi-Vk-kEH"/>
+                                    <constraint firstAttribute="bottom" secondItem="skS-Tl-yPo" secondAttribute="bottom" constant="5" id="nUy-nF-Tdw"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="snM-25-3wz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5e4-lq-4u9"/>
                             <constraint firstItem="MPS-04-bPs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="G3L-SV-h8x"/>
-                            <constraint firstItem="snM-25-3wz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IEC-hx-xQf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MPS-04-bPs" secondAttribute="trailing" constant="10" id="NmQ-yL-emK"/>
-                            <constraint firstItem="snM-25-3wz" firstAttribute="top" secondItem="MPS-04-bPs" secondAttribute="bottom" id="j61-qg-I9t"/>
+                            <constraint firstItem="snM-25-3wz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fv5-B1-7jY"/>
+                            <constraint firstItem="snM-25-3wz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gnp-AA-cRG"/>
+                            <constraint firstItem="snM-25-3wz" firstAttribute="top" secondItem="MPS-04-bPs" secondAttribute="bottom" id="ltz-xp-mId"/>
                             <constraint firstItem="MPS-04-bPs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="pNa-dY-Jxa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="l6c-Ye-UCE"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="l6c-Ye-UCE">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="cityLabel" destination="bkb-66-B0D" id="zLz-dW-i9W"/>
                         <outlet property="heroImg" destination="MPS-04-bPs" id="uB5-HR-DnK"/>
+                        <outlet property="temperatureCondition" destination="MYj-eb-WZ8" id="b5A-qH-s82"/>
                         <outlet property="temperatureLabel" destination="E4f-t0-6fH" id="pFj-4f-9UX"/>
-                        <outlet property="weatherIcon" destination="Cin-Ff-biP" id="jOc-HQ-Gh6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,7 +101,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iXN-8E-4Dd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JZf-2b-sFW">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JZf-2b-sFW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,7 +139,7 @@
             </objects>
             <point key="canvasLocation" x="-1647" y="504"/>
         </scene>
-        <!--Account-->
+        <!--Readings-->
         <scene sceneID="sSq-oE-tPD">
             <objects>
                 <viewController id="X2H-GG-wIS" sceneMemberID="viewController">
@@ -137,7 +149,7 @@
                         <color key="backgroundColor" red="1" green="0.68852695370000006" blue="0.78972028679999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pbd-f8-CFZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="account" id="b35-Hr-gcy"/>
+                    <tabBarItem key="tabBarItem" title="Readings" image="readings" id="b35-Hr-gcy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwO-mo-YqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="61" width="375" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCells" rowHeight="350" id="3Xi-WM-myn" customClass="CustomCellCalendar" customModule="OurLadyHope" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCells" rowHeight="350" id="3Xi-WM-myn" customClass="CustomCellCalendar" customModule="OurLadyHope" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Xi-WM-myn" id="Dk1-nG-aW3">
@@ -244,10 +256,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aboutus" width="20" height="20"/>
-        <image name="account" width="20" height="20"/>
-        <image name="calendar" width="20" height="20"/>
-        <image name="events" width="20" height="20"/>
-        <image name="home" width="20" height="20"/>
+        <image name="aboutus" width="25" height="25"/>
+        <image name="calendar" width="25" height="25"/>
+        <image name="events" width="25" height="25"/>
+        <image name="home" width="25" height="25"/>
+        <image name="readings" width="25" height="25"/>
     </resources>
 </document>

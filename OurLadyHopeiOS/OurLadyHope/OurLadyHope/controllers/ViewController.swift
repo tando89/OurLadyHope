@@ -24,7 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var heroImg: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var weatherIcon: UIImageView!
+    @IBOutlet weak var temperatureCondition: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         displayHeroImage()
@@ -69,8 +69,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if let tempResult = json ["main"] ["temp"].double {
             weatherDataModel.tempurature = Int((tempResult - 273.15) * (9 / 5)  + 32)
             weatherDataModel.city = json["name"].stringValue
-            weatherDataModel.condition = json["weather"][0]["id"].intValue
-            weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+            //weatherDataModel.condition = json["weather"][0]["id"].intValue
+            //weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+            weatherDataModel.weatherDescription = json["weather"][0]["description"].stringValue
             updateUIWithWeatherData()
             
         } else {
@@ -82,7 +83,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func updateUIWithWeatherData() {
         cityLabel.text = weatherDataModel.city
         temperatureLabel.text = "\(weatherDataModel.tempurature)°F"
-        weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+        temperatureCondition.text = weatherDataModel.weatherDescription
+        //weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
     }
     //didUpdateLocations method when the location manager has found the location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
