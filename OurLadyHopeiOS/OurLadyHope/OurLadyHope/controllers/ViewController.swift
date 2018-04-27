@@ -12,12 +12,11 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    var strPhoneNumber = "9098846375"
     //Constants
     let imgUrl = "https://raw.githubusercontent.com/tando89/myImagesLinks/master/ChurchImg.jpg"
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let APP_ID = "0394de9290396bfaf54d7ebe471cbd00"
-    
-    //TODO: Declare instance variables here
     let locationManager = CLLocationManager()
     //weather data model object
     let weatherDataModel = WeatherDataModel()
@@ -25,9 +24,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var temperatureCondition: UILabel!
+    @IBOutlet weak var mAddress: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         displayHeroImage()
+        copyText()
         
         //TODO:Set up the location manager here.
         locationManager.delegate = self
@@ -37,6 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         //get the gps location
         locationManager.startUpdatingLocation()
+        
         
     }
 
@@ -58,7 +60,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print(weatherJSON)
                 self.updateWeatherData(json: weatherJSON)
             } else {
-                print("Error \(response.result.error)")
+                //print("Error \(response.result.error)")
                 self.cityLabel.text = "Connection Errors"
             }
         }
@@ -111,5 +113,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func displayHeroImage(){
         heroImg.sd_setImage(with: URL(string: imgUrl) , placeholderImage: UIImage(named: "loadingImage.png"))
     }
+    
+    //make textField copiable
+    func copyText() {
+        mAddress.delegate = self
+        mAddress.inputView = UIView() //prevent soft keyboard pops up
+        mAddress.tintColor = .clear //prevent cursor pops up
+    }
+    
+    @IBAction func mPhoneCall(_ sender: Any) {
+        
+        if let phoneCallURL:URL = URL(string: "tel:\(strPhoneNumber)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                let alertController = UIAlertController(title: "Our Lady Of Hope", message: "Press Yes if you want to call our office \n (909) 884-6375?", preferredStyle: .alert)
+                let yesPressed = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+                })
+                let noPressed = UIAlertAction(title: "No", style: .default, handler: { (action) in
+                    
+                })
+                alertController.addAction(yesPressed)
+                alertController.addAction(noPressed)
+                present(alertController, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
 }
-
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false //prevent editting
+    }
+}
