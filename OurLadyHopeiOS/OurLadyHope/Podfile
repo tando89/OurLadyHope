@@ -9,4 +9,5 @@ target 'OurLadyHope' do
     pod 'SDWebImage', '~> 4.0'
     pod 'SwiftyJSON'
     pod 'Alamofire'
+    pod 'SVProgressHUD'
 end

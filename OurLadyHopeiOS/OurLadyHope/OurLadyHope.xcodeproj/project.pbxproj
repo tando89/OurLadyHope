@@ -15,6 +15,8 @@
 		273E8AA8206F5210004E8645 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E8AA7206F5210004E8645 /* CalendarVC.swift */; };
 		273E8AAA206F5421004E8645 /* CustomCellCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */; };
 		27513B8D2077418E008043B4 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27513B8C2077418E008043B4 /* WeatherDataModel.swift */; };
+		27AAD75F2094FB2E009528CA /* CustomEventsViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAD75E2094FB2E009528CA /* CustomEventsViewCells.swift */; };
+		27AAD7612094FBA9009528CA /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAD7602094FBA9009528CA /* EventsVC.swift */; };
 		52C1AF4194FBC5B5E1ECC90B /* Pods_OurLadyHope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		273E8AA7206F5210004E8645 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCalendar.swift; sourceTree = "<group>"; };
 		27513B8C2077418E008043B4 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		27AAD75E2094FB2E009528CA /* CustomEventsViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventsViewCells.swift; sourceTree = "<group>"; };
+		27AAD7602094FBA9009528CA /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
 		3D6F0602DED2EF4406AE7A7E /* Pods-OurLadyHope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurLadyHope.release.xcconfig"; path = "Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope.release.xcconfig"; sourceTree = "<group>"; };
 		BEF06D9206FDD9B7DC31DF15 /* Pods_OurLadyHope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurLadyHope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC4D4D4CBF7F8408F87CCC /* Pods-OurLadyHope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurLadyHope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				2715EF51206743DF007DE043 /* AppDelegate.swift */,
 				2715EF53206743DF007DE043 /* ViewController.swift */,
 				273E8AA7206F5210004E8645 /* CalendarVC.swift */,
+				27AAD7602094FBA9009528CA /* EventsVC.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				273E8AA9206F5421004E8645 /* CustomCellCalendar.swift */,
+				27AAD75E2094FB2E009528CA /* CustomEventsViewCells.swift */,
 			);
 			path = customCells;
 			sourceTree = "<group>";
@@ -209,12 +215,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-OurLadyHope/Pods-OurLadyHope-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +274,9 @@
 				27513B8D2077418E008043B4 /* WeatherDataModel.swift in Sources */,
 				2715EF54206743DF007DE043 /* ViewController.swift in Sources */,
 				2715EF52206743DF007DE043 /* AppDelegate.swift in Sources */,
+				27AAD75F2094FB2E009528CA /* CustomEventsViewCells.swift in Sources */,
 				273E8AA8206F5210004E8645 /* CalendarVC.swift in Sources */,
+				27AAD7612094FBA9009528CA /* EventsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
